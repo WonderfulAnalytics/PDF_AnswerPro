@@ -24,13 +24,12 @@ from langchain.callbacks import get_openai_callback
 #pip install langchain
 #pip install streamlit
 
-headers = {
-    "authorization": st.secrets["auth_key"],
-    "content-type": "application/json"
-}
-
 
 def main():
+    headers = {
+        "authorization": st.secrets["auth_key"],
+        "content-type": "application/json"
+    }
     #load_dotenv()
     # Add custom CSS to set the background color to navy blue
     # define parameters for the webpage
