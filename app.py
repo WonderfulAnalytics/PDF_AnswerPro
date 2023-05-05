@@ -17,17 +17,20 @@ from langchain.llms import OpenAI # langchain is wrapper for llms from openAI
 # Monitor how much money spent for question answered by the llm
 # currently only work for opeai
 from langchain.callbacks import get_openai_callback
-import toml
-import openai
+
 #pip install faiss-cpu
 #pipinstall tiktoken
 #!pip install openai
 #pip install langchain
 #pip install streamlit
 
+headers = {
+    "authorization": st.secrets["auth_key"],
+    "content-type": "application/json"
+}
+
 
 def main():
-    # .env file is created separtely
     load_dotenv()
     # Add custom CSS to set the background color to navy blue
     # define parameters for the webpage
@@ -89,10 +92,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
