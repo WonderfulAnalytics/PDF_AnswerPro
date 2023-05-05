@@ -31,7 +31,7 @@ headers = {
 
 
 def main():
-    load_dotenv()
+    #load_dotenv()
     # Add custom CSS to set the background color to navy blue
     # define parameters for the webpage
     # Set the page configuration
