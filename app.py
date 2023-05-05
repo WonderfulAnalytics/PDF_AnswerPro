@@ -27,7 +27,7 @@ from langchain.callbacks import get_openai_callback
 
 def main():
     headers = {
-        "authorization": st.secrets["auth_key"],
+        "authorization": st.secrets["OPENAI_API_KEY"],
         "content-type": "application/json"
     }
     #load_dotenv()
