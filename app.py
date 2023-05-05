@@ -17,7 +17,8 @@ from langchain.llms import OpenAI # langchain is wrapper for llms from openAI
 # Monitor how much money spent for question answered by the llm
 # currently only work for opeai
 from langchain.callbacks import get_openai_callback
-
+import toml
+import openai
 #pip install faiss-cpu
 #pipinstall tiktoken
 #!pip install openai
@@ -25,9 +26,8 @@ from langchain.callbacks import get_openai_callback
 #pip install streamlit
 
 
-
-
 def main():
+    # .env file is created separtely
     load_dotenv()
     # Add custom CSS to set the background color to navy blue
     # define parameters for the webpage
@@ -73,6 +73,7 @@ def main():
             chain = load_qa_chain(llm, chain_type="stuff")
             with get_openai_callback() as cbk:
                 response = chain.run(input_documents=docs, question=user_question)
+                print(cbk)
             return response
 
         with st.form("my_form"):
