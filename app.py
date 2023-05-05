@@ -2,7 +2,7 @@
 import configparser
 config = configparser.ConfigParser()
 config.read('config.toml')
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import streamlit as st
 import os
 from PyPDF2 import PdfReader
